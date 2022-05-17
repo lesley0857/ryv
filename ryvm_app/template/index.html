@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+{%if lga %}
+   <div>List of LGA---------------------Sum total for polling unit</div>
+       <hr/> 
+   {% for lga in lga %}
+        <div>
+            <a href=" /ward/{{lga.lga_id}}/">{{lga.lga_name}}</a>
+            -------------
+            <a href=" /tu/{{lga.lga_id}}/">sum total reward for this polling unit</a>
+        </div>
+    {% endfor %}
+{% endif%}
+
+
+{%if ward %}
+    <div>List of wards</div>
+    <hr/> 
+    
+        {% for w in ward %}
+        <div>
+        <a href=" /pu/{{w.ward_id}}/">{{w.ward_name}}</a>
+        </div>
+        {% endfor %}
+    
+{% endif %}
+
+
+{%if pu %}
+    <div>List of polling_units</div>
+    <hr/> 
+    {% for p in pu %}
+    <div>
+    {{p.polling_unit_id}}
+     <a href="/pur/{{p.uniqueid }}/">{{p.polling_unit_name}}</a>
+    </div>
+     {% endfor %}
+{% endif %}
+
+
+    {% for p in pur %}
+    <div>
+        {{p.party_abbreviation}}
+        ----------
+        {{p.party_score}}
+    </div>
+    {% endfor %}
+
+    {% for t in tu %}
+    <div>
+    {{t}}
+</div>
+   {% endfor %}
+    
+</body>
+
+</html>

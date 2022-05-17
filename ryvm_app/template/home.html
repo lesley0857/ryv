@@ -52,7 +52,7 @@ REDEMPTORIST YOUTH VOCATION MINISTRY  RYVM
 <div class="headerforeground02">
 </div>
 <div class="ttr_headershape01">
-<div class="html_content"><p><span style="font-family:'Open Sans';font-weight:700;font-size:1em;color:rgba(78,78,78,1);">+2349052310522</span></p></div>
+<div class="html_content"><p><span style="font-family:'Open Sans';font-weight:700;font-size:1em;color:rgba(78,78,78,1);">09052310522</span></p></div>
 </div>
 <div class="ttr_headershape02">
 <div class="html_content"><p><span style="font-family:'Open Sans';font-weight:700;font-size:1em;color:rgba(78,78,78,1);">nwekelesley@gmail.com</span></p></div>
@@ -127,13 +127,54 @@ REDEMPTORIST YOUTH VOCATION MINISTRY  RYVM
 </ul>
 </div>
 <div class="ttr_slideshow_in">
-<div class="ttr_slideshow_last">
+<div class="ttr_slideshow_last"><
 <div class="left-button">
 </div>
+
+ <div style=" {
+
+        animation-name: slide-change;
+        animation-duration: 9s;
+        animation-delay : 4;
+        animation-iteration-count: infinite;
+  }
+
+
+
+      {% for i in clergy_pic %}
+ @keyframes slide-change {
+
+    0%{
+      opacity:1;
+      display:flex;
+    line-height:350px;
+    justify-content:center;
+    flex-basis:80%;
+     background:url({{i.image.url}});
+        background-size:cover;
+
+    }
+
+
+
+       {% endfor %}
+
+ }"></div>
+
+{% for i in ward %}
+ {{i.id}}
+ {% endfor %}
+
+ {% for i in clergy_pic %}
+ {{i.id}}
+ {% endfor %}
+
+
+
 <div id="nav"></div>
 <div class="right-button">
 </div>
-</div>
+></div>
 </div>
 </div>
 <div class="ttr_banner_slideshow">

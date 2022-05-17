@@ -1,1 +1,0 @@
-web: gunicorn ryvm_project.wsgi

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ryvm_app.views import home_view
+from ryvm_app.views import *
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -23,6 +23,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
+    path('pu/<str:id>/', pu_view, name='pu_view'),
+    path('ward/<str:id>/', ward_view, name='ward_view'),
+    path('pur/<str:id>/', pur_view, name='pur_view'),
+    path('tu/<str:id>/', tu_view, name='tu_view')
 ]
 
 
