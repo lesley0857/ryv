@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'ryvm_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bincom',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'NAME': 'heroku_3a3d871355464dd',
+        'USER': 'b767e3a0bf82b2',
+        'PASSWORD': 'f0184b78',
+        'HOST': 'us-cdbr-east-05.cleardb.net',
         'PORT': '3306',
     }
 }

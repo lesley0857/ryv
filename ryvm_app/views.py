@@ -6,6 +6,7 @@ from .models import *
 def home_view(request):
     state = States.objects.get(state_id=25)
     lga = Lga.objects.all()
+    
     context = {'lga':lga}
     return render(request,"index.html",context)
 
