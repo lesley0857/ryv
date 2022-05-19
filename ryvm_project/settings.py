@@ -79,16 +79,24 @@ WSGI_APPLICATION = 'ryvm_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 #
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'heroku_3a3d871355464dd',
+#         'USER': 'b767e3a0bf82b2',
+#         'PASSWORD': 'f0184b78',
+#         'HOST': 'us-cdbr-east-05.cleardb.net',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_3a3d871355464dd',
-        'USER': 'b767e3a0bf82b2',
-        'PASSWORD': 'f0184b78',
-        'HOST': 'us-cdbr-east-05.cleardb.net',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 import pymysql
 pymysql.install_as_MySQLdb()
 
