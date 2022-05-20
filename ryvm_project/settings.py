@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-6d6+#+20luai&*j_lt5jk*k+h7@4bde6s*s@urilaar#lfhv3h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,23 +79,37 @@ WSGI_APPLICATION = 'ryvm_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 #
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_3a3d871355464dd',
+        'USER': 'b767e3a0bf82b2',
+        'PASSWORD': 'f0184b78',
+        'HOST': 'us-cdbr-east-05.cleardb.net',
+        'PORT': '3306',
+        "OPTIONS":{"init_command":"SET sql_mode='STRICT_TRANS_TABLES' "}
+    }
+}
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'heroku_3a3d871355464dd',
-#         'USER': 'b767e3a0bf82b2',
-#         'PASSWORD': 'f0184b78',
-#         'HOST': 'us-cdbr-east-05.cleardb.net',
+#         'NAME': 'bincom',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
 #         'PORT': '3306',
+#        # "OPTIONS":{"init_command":"SET sql_mode='STRICT_TRANS_TABLES' "}
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 import pymysql
 pymysql.install_as_MySQLdb()

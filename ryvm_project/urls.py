@@ -28,6 +28,4 @@ urlpatterns = [
     path('pur/<str:id>/', pur_view, name='pur_view'),
     path('tu/<str:id>/', tu_view, name='tu_view')
 ]
-
-
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
